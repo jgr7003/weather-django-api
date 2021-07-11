@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+    weather:
+        build: ./
+        command: sh ./commands/python.sh
+        entrypoint: sh ./commands/python.sh
+        volumes:
+            - .:/code
+        ports:
+            - "8008:8008"
