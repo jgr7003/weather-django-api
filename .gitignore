@@ -40,18 +40,7 @@ pip-delete-this-directory.txt
 .DS_Store
 .idea/
 
-# Caching
-caching/*
-
-# managers
-manage.py
-manage-tst-1.py
-manage-tst-2.py
-
-docker-compose.yml
-
 db.sqlite3
 
 # Debug search
-searches/flights/*
 /.project

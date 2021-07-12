@@ -49,7 +49,7 @@ class OpenWeatherMapProvider(Provider):
 
     @country.setter
     def country(self, value: str):
-        self._country = value
+        self._country = value.lower()
 
     @property
     def lang(self):
