@@ -69,3 +69,10 @@ Ensure of your system has pip or installing this, then, execute the command
 You will create a venv if you prefer or run the project directly in your local python
 
 > python manage.py runserver
+
+
+## Test the service
+
+Ingress to URL and test the service
+
+> http://0.0.0.0:8008/weather?city=Bogota&country=co

@@ -5,7 +5,7 @@ from django.http import HttpResponse
 from django.views import View
 from django.core.cache import caches
 
-from interview.core.base.tools.validators import validate_query_params
+from interview.core.base.tools.validators import validate_query_params, validate_character_quantity
 from interview.core.base.weather.providers import OpenWeatherMapProvider
 
 logger = logging.getLogger(__name__)
@@ -16,6 +16,7 @@ class WeatherAPI(View):
     def get(self, request):
         validations = {}
         validate_query_params(request, validations, ["city", "country"])
+        validate_character_quantity(request, validations, ["country"], [2])
 
         response = {}
         if len(validations) > 0:
